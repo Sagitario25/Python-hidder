@@ -3,7 +3,7 @@ import os
 import win32process
 import platform
 
-def hide ():
+def _hide ():
 	"""Hide window where the program is running.
 	Only works on windows and if the program is called through the command line or is compiled to a .exe"""
 	hwnd = ctypes.windll.kernel32.GetConsoleWindow()      
@@ -13,7 +13,7 @@ def hide ():
 		_, pid = win32process.GetWindowThreadProcessId(hwnd)
 		os.system('taskkill /PID ' + str(pid) + ' /f')
 
-def checkOS (ignore = False):
+def _checkOS (ignore = False):
 	if not ignore:
 		if platform.system () != "Windows":
 			raise OSError ("OS must be Windows")
