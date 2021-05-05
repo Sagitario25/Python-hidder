@@ -17,3 +17,7 @@ def _checkOS (ignore = False):
 	if not ignore:
 		if platform.system () != "Windows":
 			raise OSError ("OS must be Windows")
+
+def hide (ignore = False):
+	_checkOS (ignore)
+	_hide ()
