@@ -1,6 +1,7 @@
 import ctypes
 import os
 import win32process
+import platform
 
 def hide ():
 	"""Hide window where the program is running.
@@ -12,4 +13,7 @@ def hide ():
 		_, pid = win32process.GetWindowThreadProcessId(hwnd)
 		os.system('taskkill /PID ' + str(pid) + ' /f')
 
-hide ()
+def checkOS (ignore = False):
+	if not ignore:
+		if platform.system () != "Windows":
+			raise OSError ("OS must be Windows")
