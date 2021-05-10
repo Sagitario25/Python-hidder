@@ -69,6 +69,9 @@
 >>```
 >And just like that your window is hidden, or what is the same, your program is running on the background.
 >```hidder.hide``` can recive a boolean argument, it's false by deafault, true will make it to ignore the windows blocker, but it assured the code will fail a bit later.
+>
+>
+>I just added another method, now you can just open this file of the folder of the desired and I will import ```main.py``` and call ```main ()``` inside it. You might need to recode part of your project, but the method other is still available, so there is no need to use this one.
 
 
 <!-- ACKNOWLEDGEMENTS -->
