@@ -21,3 +21,11 @@ def _checkOS (ignore = False):
 def hide (ignore = False):
 	_checkOS (ignore)
 	_hide ()
+
+def main ():
+        hide ()
+        import main
+        main.main ()
+
+if __name__ == "__main__":
+        main ()
